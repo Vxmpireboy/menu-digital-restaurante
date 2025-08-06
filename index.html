@@ -3,86 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Restaurante Medellín</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet"/>
-  <script src="https://kit.fontawesome.com/a2e0e6b5f9.js" crossorigin="anonymous"></script>
+  <title>Restaurante Medellín - Menú y Reservas</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Restaurante Medellín</h1>
-    <p>Sabor local con estilo moderno</p>
+    <div class="logo">🍽 Medellín Gourmet</div>
+    <nav class="navbar" id="navbar">
+      <a href="#inicio">Inicio</a>
+      <a href="#menu">Menú</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   </header>
 
-  <nav class="menu-nav">
-    <button onclick="showSection('entradas')">Entradas</button>
-    <button onclick="showSection('platos')">Platos Fuertes</button>
-    <button onclick="showSection('bebidas')">Bebidas</button>
-    <button onclick="showSection('postres')">Postres</button>
-  </nav>
+  <section id="inicio" class="hero">
+    <h1>Sabores auténticos de Medellín</h1>
+    <p>Ven y disfruta una experiencia inolvidable en nuestro restaurante</p>
+    <a href="#menu" class="btn">Ver Menú</a>
+  </section>
 
-  <section id="entradas" class="menu-section active">
-    <h2>Entradas</h2>
-    <div class="item">
-      <img src="https://source.unsplash.com/300x200/?salad" alt="Ensalada fresca" />
-      <h3>Ensalada Fresca</h3>
-      <p>Mezcla de vegetales con aderezo de la casa</p>
+  <section id="menu" class="menu-section">
+    <h2>Menú Destacado</h2>
+    <div class="menu-items">
+      <div class="item">
+        <img src="https://source.unsplash.com/400x300/?colombian-food" alt="Plato 1"/>
+        <h3>Bandeja Paisa</h3>
+        <p>Tradicional con todos sus ingredientes</p>
+        <span>$25.000</span>
+      </div>
+      <div class="item">
+        <img src="https://source.unsplash.com/400x300/?steak" alt="Plato 2"/>
+        <h3>Churrasco</h3>
+        <p>Con papas criollas y ensalada</p>
+        <span>$28.000</span>
+      </div>
+      <div class="item">
+        <img src="https://source.unsplash.com/400x300/?salad" alt="Plato 3"/>
+        <h3>Ensalada Vegana</h3>
+        <p>Fresca, saludable y deliciosa</p>
+        <span>$18.000</span>
+      </div>
     </div>
   </section>
 
-  <section id="platos" class="menu-section">
-    <h2>Platos Fuertes</h2>
-    <div class="item">
-      <img src="https://source.unsplash.com/300x200/?steak" alt="Plato fuerte" />
-      <h3>Churrasco Medellín</h3>
-      <p>Corte premium acompañado de papas criollas</p>
-    </div>
+  <section id="nosotros" class="about-section">
+    <h2>Sobre Nosotros</h2>
+    <p>Somos un restaurante tradicional en Medellín, comprometido con los sabores típicos y la cocina de autor. Nuestro chef combina tradición y creatividad para ofrecer platos inolvidables.</p>
+    <img src="https://source.unsplash.com/600x400/?chef,kitchen" alt="Chef"/>
   </section>
 
-  <section id="bebidas" class="menu-section">
-    <h2>Bebidas</h2>
-    <div class="item">
-      <img src="https://source.unsplash.com/300x200/?cocktail" alt="Bebida" />
-      <h3>Cóctel Tropical</h3>
-      <p>Bebida refrescante de frutas naturales</p>
+  <section id="contacto" class="contact-section">
+    <h2>Ubicación & Contacto</h2>
+    <p>📍 Calle 10 #43A-30, Medellín, Colombia</p>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps?q=Medellin+Calle+10+43A-30&output=embed" allowfullscreen="" loading="lazy"></iframe>
     </div>
-  </section>
-
-  <section id="postres" class="menu-section">
-    <h2>Postres</h2>
-    <div class="item">
-      <img src="https://source.unsplash.com/300x200/?dessert" alt="Postre" />
-      <h3>Brownie Caliente</h3>
-      <p>Con helado de vainilla y salsa de chocolate</p>
-    </div>
-  </section>
-
-  <section class="contacto">
-    <h2>Ubicación</h2>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.707960924905!2d-75.57075302502299!3d6.251740193740727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429a6b8c2177d%3A0x28fc442a2c34d3e2!2sMedell%C3%ADn!5e0!3m2!1ses!2sco!4v1690833600000!5m2!1ses!2sco"
-      width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"
-    ></iframe>
-
-    <h3>Contáctanos</h3>
-    <div class="redes">
-      <a href="https://wa.me/573001112222" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <div class="social-links">
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Facebook"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="WhatsApp"></a>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Restaurante Medellín | Desarrollado por Mateo Isaza</p>
+    <p>&copy; 2025 Medellín Gourmet - Todos los derechos reservados.</p>
   </footer>
-
-  <script>
-    function showSection(id) {
-      document.querySelectorAll('.menu-section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
 </body>
 </html>
