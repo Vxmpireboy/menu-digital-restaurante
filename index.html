@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Restaurante Delicia</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante Sabor Urbano</title>
+  <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -12,9 +12,9 @@
 </head>
 <body>
   <header>
-    <nav>
-      <div class="logo">Delicia</div>
-      <ul class="menu">
+    <nav class="navbar">
+      <div class="logo">Sabor Urbano</div>
+      <ul class="nav-links">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#menu">Menú</a></li>
         <li><a href="#galeria">Galería</a></li>
@@ -24,60 +24,58 @@
     </nav>
   </header>
 
-  <section id="inicio" class="hero">
-    <h1>Bienvenido a Restaurante Delicia</h1>
-    <p>Sabores únicos que deleitan tu paladar</p>
-    <a href="#menu" class="boton">Ver Menú</a>
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h1>Bienvenido a Sabor Urbano</h1>
+      <p>Comida auténtica con un toque moderno</p>
+      <a href="#menu" class="btn">Ver Menú</a>
+    </div>
   </section>
 
-  <section id="menu" class="menu-section">
+  <section class="menu" id="menu">
     <h2>Nuestro Menú</h2>
-    <div class="platos">
-      <div class="plato"><img src="img/plato1.jpg" alt="Plato 1"><h3>Hamburguesa Gourmet</h3></div>
-      <div class="plato"><img src="img/plato2.jpg" alt="Plato 2"><h3>Pasta Alfredo</h3></div>
-      <div class="plato"><img src="img/plato3.jpg" alt="Plato 3"><h3>Ensalada Mediterránea</h3></div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="img/entrada.jpg" alt="Entrada">
+        <h3>Entradas</h3>
+      </div>
+      <div class="menu-item">
+        <img src="img/plato-fuerte.jpg" alt="Plato fuerte">
+        <h3>Platos Fuertes</h3>
+      </div>
+      <div class="menu-item">
+        <img src="img/postre.jpg" alt="Postre">
+        <h3>Postres</h3>
+      </div>
+      <div class="menu-item">
+        <img src="img/bebidas.jpg" alt="Bebidas">
+        <h3>Bebidas</h3>
+      </div>
     </div>
   </section>
 
-  <section id="galeria" class="galeria-section">
+  <section class="galeria" id="galeria">
     <h2>Galería</h2>
-    <div class="galeria">
-      <img src="img/local1.jpg" alt="Interior del restaurante">
-      <img src="img/local2.jpg" alt="Ambiente del restaurante">
-      <img src="img/local3.jpg" alt="Platos decorados">
+    <div class="galeria-grid">
+      <img src="img/galeria1.jpg" alt="Plato 1">
+      <img src="img/galeria2.jpg" alt="Plato 2">
+      <img src="img/galeria3.jpg" alt="Plato 3">
+      <img src="img/galeria4.jpg" alt="Plato 4">
     </div>
   </section>
 
-  <section id="ubicacion" class="ubicacion-section">
+  <section class="ubicacion" id="ubicacion">
     <h2>¿Dónde estamos?</h2>
-    <p>Cra. 45 #12-34, Medellín, Colombia</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.722511049088!2d-75.57015412404807!3d6.234849593752115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442828fdad3fcb%3A0xf5e1bc5eaf0c3eb9!2sMedell%C3%ADn!5e0!3m2!1ses-419!2sco!4v1694451037398!5m2!1ses-419!2sco" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.901403126327!2d-75.57006068476078!3d6.244202195484448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44282fda537b95%3A0xdbcbb6e6464bc7fe!2sMedell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1610000000000!5m2!1ses!2sco" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </section>
 
-  <section id="contacto" class="contacto-section">
-    <h2>Contáctanos</h2>
-    <p>WhatsApp: <a href="https://wa.me/573001112233" target="_blank">+57 300 111 2233</a></p>
-    <div class="redes">
-      <a href="#"><i class="fab fa-facebook"></i></a>
+  <footer id="contacto">
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
     </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Restaurante Delicia. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Sabor Urbano. Todos los derechos reservados.</p>
   </footer>
-
-  <script>
-    // Animación de scroll suave
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
 </body>
 </html>
