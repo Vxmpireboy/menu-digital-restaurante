@@ -3,37 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sabor Paisa - Restaurante</title>
+  <title>Restaurante Medellín</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a2e0e6b5f9.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <h1>Restaurante Sabor Paisa</h1>
-    <p>Auténtico sabor colombiano en Medellín</p>
+    <h1>Restaurante Medellín</h1>
+    <p>Sabor local con estilo moderno</p>
   </header>
 
-  <section class="menu">
-    <h2>Menú del día</h2>
-    <ul>
-      <li><strong>Bandeja Paisa</strong> - $25.000</li>
-      <li><strong>Sancocho de Gallina</strong> - $22.000</li>
-      <li><strong>Arepa con Queso</strong> - $5.000</li>
-    </ul>
+  <nav class="menu-nav">
+    <button onclick="showSection('entradas')">Entradas</button>
+    <button onclick="showSection('platos')">Platos Fuertes</button>
+    <button onclick="showSection('bebidas')">Bebidas</button>
+    <button onclick="showSection('postres')">Postres</button>
+  </nav>
+
+  <section id="entradas" class="menu-section active">
+    <h2>Entradas</h2>
+    <div class="item">
+      <img src="https://source.unsplash.com/300x200/?salad" alt="Ensalada fresca" />
+      <h3>Ensalada Fresca</h3>
+      <p>Mezcla de vegetales con aderezo de la casa</p>
+    </div>
   </section>
 
-  <section class="ubicacion">
-    <h2>¿Dónde estamos?</h2>
-    <p>Calle 70 #45-12, Laureles, Medellín</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <section id="platos" class="menu-section">
+    <h2>Platos Fuertes</h2>
+    <div class="item">
+      <img src="https://source.unsplash.com/300x200/?steak" alt="Plato fuerte" />
+      <h3>Churrasco Medellín</h3>
+      <p>Corte premium acompañado de papas criollas</p>
+    </div>
+  </section>
+
+  <section id="bebidas" class="menu-section">
+    <h2>Bebidas</h2>
+    <div class="item">
+      <img src="https://source.unsplash.com/300x200/?cocktail" alt="Bebida" />
+      <h3>Cóctel Tropical</h3>
+      <p>Bebida refrescante de frutas naturales</p>
+    </div>
+  </section>
+
+  <section id="postres" class="menu-section">
+    <h2>Postres</h2>
+    <div class="item">
+      <img src="https://source.unsplash.com/300x200/?dessert" alt="Postre" />
+      <h3>Brownie Caliente</h3>
+      <p>Con helado de vainilla y salsa de chocolate</p>
+    </div>
   </section>
 
   <section class="contacto">
-    <h2>Contacto</h2>
-    <a href="https://wa.me/573001234567" target="_blank">📲 Haz tu pedido por WhatsApp</a>
+    <h2>Ubicación</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.707960924905!2d-75.57075302502299!3d6.251740193740727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429a6b8c2177d%3A0x28fc442a2c34d3e2!2sMedell%C3%ADn!5e0!3m2!1ses!2sco!4v1690833600000!5m2!1ses!2sco"
+      width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"
+    ></iframe>
+
+    <h3>Contáctanos</h3>
+    <div class="redes">
+      <a href="https://wa.me/573001112222" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Sabor Paisa | Diseñado por Mateo Isaza</p>
+    <p>&copy; 2025 Restaurante Medellín | Desarrollado por Mateo Isaza</p>
   </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.menu-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
